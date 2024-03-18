@@ -1,2 +1,1 @@
-- [Ссылка на репозиторий](https://github.com/MariaUvakina/zakrivayuschiy-teg-f)
-- [Ссылка на проект, опубликованный в gh-pages]()
+https://github.com/MariaUvakina/zakrivayuschiy-teg-f

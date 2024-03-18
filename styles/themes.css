@@ -1,6 +1,52 @@
-/* В этом файле вы опишете значения переменных в разных цветовых схемах.
-Придерживайтесь такого именования классов:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
-*/
+:root.theme-light {
+  --heading-font-weight: 700;
+  --text-font-weight: 400;
+  --text-color: #000;
+  --button-text-color: #fff;
+  --page-bg-image: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  --page-bg-color: var(--button-text-color);
+  --btn-bg-color: var(--button-text-color);
+  --border: 2px solid #000;
+}
+
+:root.theme-dark {
+  --heading-font-weight: 785;
+  --text-font-weight: 465;
+  --text-color: #00cc14;
+  --button-text-color: #000;
+  --page-bg-image: repeating-linear-gradient(
+      to left,
+      #000 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #007f0c, #004306);
+  --page-bg-color: var(--button-text-color);
+  --btn-bg-color: var(--text-color);
+  --border: 2px solid #00cc14;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --heading-font-weight: 785;
+    --text-font-weight: 465;
+    --text-color: #00cc14;
+    --button-text-color: #000;
+    --page-bg-image: repeating-linear-gradient(
+        to left,
+        #000 0 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
+      linear-gradient(to bottom, #007f0c, #004306);
+    --page-bg-color: var(--button-text-color);
+    --btn-bg-color: var(--text-color);
+    --border: 2px solid #00cc14;
+  }
+}

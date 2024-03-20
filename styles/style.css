@@ -18,7 +18,7 @@
   display: grid;
   justify-items: center;
   margin-inline: auto;
-  font-family: var(--accent-font-family), Arial, sans-serif;
+  font-family: var(--accent-font-family), fantasy;
   margin-block-end: 100px;
   background-color: var(--page-bg-color);
   border: var(--border);
@@ -117,7 +117,7 @@
 
 .card-image {
   display: block;
-  block-size: 100%;
+  block-size: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
   inline-size: 100%;
   object-fit: cover;
   object-position: center;
@@ -140,7 +140,7 @@
   z-index: 1;
   inset-block-start: 25px;
   inset-inline-end: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
-  font-family: var(--accent-font-family), Arial, sans-serif;
+  font-family: var(--accent-font-family), fantasy;
   opacity: 0.5;
   font-size: 14px;
   line-height: normal;
@@ -151,7 +151,7 @@
 
 .card-text {
   border-block-start: var(--border);
-  padding: 25px;
+  padding: 25px 25px 0 25px;
   display: flex;
   flex-direction: column;
   gap: 27px;
@@ -169,12 +169,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-inline-size: 130px;
   position: relative;
   z-index: 1;
   appearance: none;
   border: 2px solid var(--text-color);
   background-color: var(--page-bg-color);
-  padding: 10px 35px;
+  padding: 10px 17px;
   font-size: 14px;
   text-transform: inherit;
   cursor: pointer;
@@ -212,7 +213,7 @@
 }
 
 .button__text {
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), fantasy;
   font-weight: var(--text-font-weight);
   line-height: 12px;
   font-size: 14px;
@@ -220,6 +221,10 @@
   display: block;
   color: var(--btn-bg-color);
   mix-blend-mode: difference;
+}
+
+.modal__button:last-child {
+  text-transform: uppercase;
 }
 
 .card__icon-button {
@@ -248,7 +253,8 @@
   gap: 8px;
   margin-block-start: 50px;
   margin-inline: auto;
-  padding: 20px;
+  padding-block: 15px;
+  padding-inline: 20px;
 }
 
 .button__icon {
@@ -278,7 +284,7 @@
 
 .modal::backdrop {
   opacity: 0.75;
-  background: var(--color-black);
+  background-color: #000;
 }
 
 .dialog__content {
